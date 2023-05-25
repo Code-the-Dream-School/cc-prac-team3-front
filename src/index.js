@@ -5,7 +5,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import {Login} from './components/Login'
 import { Register } from './components/Register';
-import { Lost } from './components/Lost';
+import { ForgotPassword } from './components/ForgotPassword';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +16,7 @@ root.render(
     <Routes>
       <Route exact path='/'element={<Login/>}/> 
       <Route exact path='/register'element={<Register/>}/> 
-      <Route exact path='/lost'element={<Lost/>}/> 
+      <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 
     </Routes>
     </BrowserRouter>
 );

@@ -26,4 +26,3 @@ return (
 
 )
 }
-// onClick={()=> props.onFormSwitch ('Login')}
