@@ -23,13 +23,12 @@ return (
    <p><button className="a12">Log in</button></p> 
    </form>
 
-  <a className="a2" href="http://localhost:3002/register">New customer? Create you account.</a>
-  <a className="a3" href="http://localhost:3002/ForgotPassword">Lost Password? Recover password.</a>
+  <a className="a2" href="/Register">New customer? Create you account.</a>
+  <a className="a3" href="/ForgotPassword">Lost Password? Recover password.</a>
    </div>
 )
 }
 // onClick={()=> props.onFormSwitch ('Register')}
-
 
 
 

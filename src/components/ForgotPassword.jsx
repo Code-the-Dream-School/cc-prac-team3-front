@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css"
 
-export const Lost = () => {
+export const ForgotPassword = () => {
     const [Email,setEmail]=useState("");
   
     const handleSubmit = (e) => {
@@ -16,7 +16,7 @@ return (
    <div><input className="a11" value={Email} onChange={(e)=>setEmail(e.target.value)}type="Email" placeholder="Enter your full Email" id="Email" name="Email"/></div> 
    <p><button className="a14">Recover</button></p>
    </form>
-   <a className="a4" href="http://localhost:3002">Rembembered your password? Back login.</a>
+   <a className="a4" href="/ForgotPassword">Rembembered your password? Back login.</a>
    </div>
 
 )
