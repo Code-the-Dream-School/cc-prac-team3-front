@@ -21,7 +21,7 @@ return (
    <div><p><input className="create-styles" value={pass} onChange={(e)=>setPass(e.target.value)}type="Password" placeholder="************" id="Password" name="Password"/></p></div>
    <p><button className="direction-to-new-account">Create my account</button></p>
    </form>
-   <a className="create-new-account" href="/">Already have an account? Login here.</a>
+   <a className="create-new-account" href="/Login">Already have an account? Login here.</a>
    </div>
 
 )
