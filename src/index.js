@@ -13,7 +13,7 @@ root.render(
     //    <App />
     <BrowserRouter>
     <Routes>
-      <Route exact path='/'element={<Login/>}/> 
+      <Route exact path='/Login'element={<Login/>}/> 
       <Route exact path='/register'element={<Register/>}/> 
       <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 
     </Routes>
