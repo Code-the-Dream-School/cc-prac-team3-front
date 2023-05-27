@@ -2,29 +2,29 @@ import React, { useState } from "react";
 // comentario temporal
 
 export const Login = () => {
-    const [Email,setEmail]=useState("");
+    const [email,setEmail]=useState("");
     const [pass,setPass]=useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(Email);
+        console.log(email);
       };
 return (
-    <div className="a1">
+    <div className="start-container">
         <h1 style={{color:"#860f4c",textAlign:"center"}}> My Account</h1>
    <form onSubmit={handleSubmit}>
     <div>
   {/* <b><label style={{color:"fuchsia" , textAlign:"center"}} form="Email">Email</label></b> */}
-   <p> <input className="a6" value={Email} onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter your Email" id="Email" name="Email" /></p>
+   <p> <input className="create-styles" value={email} onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter your Email" id="Email" name="Email" /></p>
     </div>
     {/* <b><label style={{color:"fuchsia",textAlign:"center"}}form="Password">Password</label></b> */}
-   <div> <input className="a7" value={pass} onChange={(e)=>setPass(e.target.value)}type="Password" placeholder="*******************" id="Password" name="Password"/></div>
+   <div> <input className="create-styles" value={pass} onChange={(e)=>setPass(e.target.value)}type="Password" placeholder="*******************" id="Password" name="Password"/></div>
    
-   <p><button className="a12">Log in</button></p> 
+   <p><button className="direction-to-the-other-page">Log in</button></p> 
    </form>
 
-  <a className="a2" href="/Register">New customer? Create you account.</a>
-  <a className="a3" href="/ForgotPassword">Lost Password? Recover password.</a>
+  <a className="create-new-account" href="/Register">New customer? Create you account.</a>
+  <a className="create-new-account" href="/ForgotPassword">Lost Password? Recover password.</a>
    </div>
 )
 }

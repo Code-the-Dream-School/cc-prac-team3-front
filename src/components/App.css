@@ -1,5 +1,5 @@
 
-.a1{
+.start-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -7,32 +7,14 @@
   
 }
 
-.a2{
+.create-new-account{
     background: #eb0d78;
     background: linear-gradient(90deg,#860f4c,#eb0b7f);
     background-clip: text;-webkit-background-clip: text;color: transparent;
     
 }
 
-.a3{
-    background: #eb0d78;
-    background: linear-gradient(90deg,#860f4c,#eb0b7f);
-    background-clip: text;-webkit-background-clip: text;color: transparent;
-}
-
-.a4{
-    background: #eb0d78;
-    background: linear-gradient(90deg,#860f4c,#eb0b7f);
-    background-clip: text;-webkit-background-clip: text;color: transparent;
-}
-
-.a5{
-    background: #eb0d78;
-    background: linear-gradient(90deg,#860f4c,#eb0b7f);
-    background-clip: text;-webkit-background-clip: text;color: transparent;
-}
-
-.a6{
+.create-styles{
     background: #f1edefec;
     border-radius: 5px;
     appearance: none;
@@ -45,71 +27,7 @@
    opacity: 0.4;
 }
 
-.a7{
-    background:#F1F1F1;
-    border-radius: 5px;
-    appearance: none;
-    font-weight: bold;
-    width: 220px;
-    height: 40px;
-    position:relative;
-    top: 15%;
-   text-align: center;
-   opacity: 0.4;
-}
-
-.a8{
-    background:#F1F1F1;
-    border-radius: 5px;
-    appearance: none;
-    font-weight: bold;
-    width: 220px;
-    height: 40px;
-    position:relative;
-    top: 15%;
-   text-align: center;
-   opacity: 0.4;
-}
-
-.a9{
-    background:#F1F1F1;
-    border-radius: 5px;
-    appearance: none;
-    font-weight: bold;
-    width: 220px;
-    height: 40px;
-    position:relative;
-    top: 15%;
-   text-align: center;
-   opacity: 0.4;
-}
-
-.a10{
-    background:#F1F1F1;
-    border-radius: 5px;
-    appearance: none;
-    font-weight: bold;
-    width: 220px;
-    height: 40px;
-    position:relative;
-    top: 15%;
-   text-align: center;
-   opacity: 0.4;
-}
-
-.a11{
-    appearance: none;
-    border-radius: 5px;
-    font-weight: bold;
-    width: 220px;
-    height: 40px;
-    position:relative;
-    top: 15%;
-   text-align: center;
-   opacity: 0.4;
-}
-
-.a12{
+.direction-to-the-other-page{
     appearance: none;
     border-radius: 5px;
     background-color:#e07a8c;
@@ -128,7 +46,7 @@
 
 }
 
-.a13{
+.direction-to-new-account{
     appearance: none;
     border-radius: 5px;
     background-color:#e07a8c;
@@ -145,20 +63,3 @@
    color: white;
 }
 
-
-.a14{
-    appearance: none;
-    border-radius: 5px;
-    background-color: #e07a8c;
-    font-weight: bolder;
-    width: 140px;
-    height: 40px;
-    position:relative;
-    top: 15%;
-    left: 4px;
-   padding: 15px;
-   text-align: center;
-   width:auto;
-   font-size: medium;
-   color: white;
-}
