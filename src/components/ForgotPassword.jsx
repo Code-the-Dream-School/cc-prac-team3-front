@@ -16,7 +16,7 @@ return (
    <div><input className="create-styles" value={email} onChange={(e)=>setEmail(e.target.value)}type="Email" placeholder="Enter your full Email" id="Email" name="Email"/></div> 
    <p><button className="direction-to-the-other-page-2">Recover</button></p>
    </form>
-   <a className="create-new-account" href="/">Rembembered your password? Back login.</a>
+   <a className="create-new-account" href="/Login">Rembembered your password? Back login.</a>
    </div>
 
 )
