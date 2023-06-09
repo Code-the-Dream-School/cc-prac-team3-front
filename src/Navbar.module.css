@@ -2,17 +2,16 @@
 
 body {
   margin: 0;
-  padding: 0;
   font-family: "Nunito", sans-serif;
   background-color: #fcfcfc;
 }
 
 .container {
-  max-width: 1100px;
+  width: 100%;
   margin: 0;
   padding: 0 15px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   height: 100%;
 }
 
@@ -20,7 +19,6 @@ nav {
   height: 60px;
   background-color: #f7f1eb;
   display: flex;
-  justify-content: left;
   position: relative;
 }
 
@@ -64,22 +62,40 @@ ul {
   background-color: #574c4c;
 }
 
-@media (max-width: 768px) {
-  .elements ul li:not(:last-child) {
-    margin-right: 30px;
-  }
+.icons {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  margin-left: auto;
+  font-size: 24px;
+  padding: 10px;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 905px) {
   .menu {
+    visibility: visible;
     display: block;
     cursor: pointer;
+    padding: 10px;
+  }
+
+  .icons {
+    font-size: 18px;
   }
 
   .elements {
+    display: none;
+  }
+
+  .elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .elementsMobile {
     position: absolute;
     left: 0;
     top: 60px;
+    padding-right: 110px;
     background-color: #f7f1eb;
     width: auto;
     height: calc(100vh - 60px);
@@ -87,17 +103,22 @@ ul {
     overflow: hidden;
   }
 
-  .elements.active {
+  .elementsMobile.active {
     width: 270px;
   }
 
-  .elements ul {
+  .elementsMobile ul {
     display: flex;
     flex-direction: column;
   }
 
-  .elements ul li {
+  .elementsMobile ul li {
     margin-right: unset;
     margin-top: 22px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #2f234f;
   }
 }
