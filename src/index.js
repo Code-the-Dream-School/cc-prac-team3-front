@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import {Login} from './components/Login'
 import { Register } from './components/Register';
 import { ForgotPassword } from './components/ForgotPassword';
-// import { Next } from './components/Next';
 import { ResetPassword } from './components/ResetPassword';
 import { Navbar } from './components/Navbar';
 import { Cart } from './pages/Cart';
@@ -24,7 +23,6 @@ root.render(
       <Route exact path='/Login'element={<Login/>}/> 
       <Route exact path='/register'element={<Register/>}/> 
       <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 
-      {/* <Route exact path='/Next'element={<Next/>}/>  */}
       <Route exact path='/ResetPassword'element={<ResetPassword/>}/> 
       <Route exact path='/'element={<cart/>}/>
       <Route exact path='/Cart'element={<Cart/>}/> 
