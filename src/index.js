@@ -7,7 +7,7 @@ import { Register } from './components/Register';
 import { ForgotPassword } from './components/ForgotPassword';
 import { ResetPassword } from './components/ResetPassword';
 import { Cart } from './components/Cart';
-import { Shop } from './pages/Shop';
+import { Shop } from './components/Shop';
 
 // import App from './App';
 
