@@ -7,7 +7,7 @@ export const Register = () => {
 
     const [email,setEmail]=useState("");
     const [pass,setPass]=useState("");
-    const [Name,setName]=useState("");
+    const [name,setName]=useState("");
     const [phone,setPhone]=useState("");
     const [address,setAddress]=useState("");
     const [city,setCity]=useState("");
@@ -36,7 +36,7 @@ return (
         
         <form onSubmit={handleSubmit}>
         <h3>Please complete this information.</h3>
-         <div><p><input className="create-styles" value={Name} onChange={(e)=>setName(e.target.value)} type="Name" placeholder="Enter your full name" id="Name" name="Name"/></p></div>
+         <div><p><input className="create-styles" value={name} onChange={(e)=>setName(e.target.value)} type="Name" placeholder="Enter your full name" id="Name" name="Name"/></p></div>
         <div><p><input className="create-styles" value={email} onChange={(e)=>setEmail(e.target.value)}type="Email" placeholder="Enter your email" id="Email" name="Email"/></p></div>
         <div><p><input className="create-styles" value={pass} onChange={(e)=>setPass(e.target.value)}type="Password" placeholder="Password" id="Password" name="Password"/></p></div>
         <div><p><input className="create-styles" value={confirmPass} onChange={(e)=>setConfirmPass(e.target.value)}type="Password" placeholder="Confirmed password" id="confirmPass" name="confirmPass"/></p></div>

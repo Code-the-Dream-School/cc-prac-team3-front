@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// comentario temporal
+
 
 export const Login = () => {
     const [email,setEmail]=useState("");
@@ -14,10 +14,8 @@ return (
         <h1 style={{color:"#850b70",textAlign:"center"}}> My account</h1>
    <form onSubmit={handleSubmit}>
     <div>
-  {/* <b><label style={{color:"fuchsia" , textAlign:"center"}} form="Email">Email</label></b> */}
    <p> <input className="create-styles" value={email} onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter your email" id="Email" name="Email" /></p>
     </div>
-    {/* <b><label style={{color:"fuchsia",textAlign:"center"}}form="Password">Password</label></b> */}
    <div> <input className="create-styles" value={pass} onChange={(e)=>setPass(e.target.value)}type="Password" placeholder="Password" id="Password" name="Password"/></div>
    
    <p><button className="direction-to-the-other-page">Log in</button></p> 
@@ -28,7 +26,7 @@ return (
    </div>
 )
 }
-// onClick={()=> props.onFormSwitch ('Register')}
+
 
 
 

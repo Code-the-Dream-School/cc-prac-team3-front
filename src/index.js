@@ -6,8 +6,7 @@ import {Login} from './components/Login'
 import { Register } from './components/Register';
 import { ForgotPassword } from './components/ForgotPassword';
 import { ResetPassword } from './components/ResetPassword';
-import { Navbar } from './components/Navbar';
-import { Cart } from './pages/Cart';
+import { Cart } from './components/Cart';
 import { Shop } from './pages/Shop';
 
 // import App from './App';
@@ -18,13 +17,12 @@ root.render(
     // <BrowserRouter>
     //    <App />
     <BrowserRouter>
-    <Navbar/>
     <Routes>
       <Route exact path='/Login'element={<Login/>}/> 
       <Route exact path='/register'element={<Register/>}/> 
       <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 
       <Route exact path='/ResetPassword'element={<ResetPassword/>}/> 
-      <Route exact path='/'element={<cart/>}/>
+      <Route exact path='/'element={<Cart/>}/>
       <Route exact path='/Cart'element={<Cart/>}/> 
       <Route exact path='/Shop'element={<Shop/>}/> 
     </Routes>
