@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// import App from './App';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import {Login} from './components/Login'
@@ -8,9 +9,6 @@ import { ForgotPassword } from './components/ForgotPassword';
 import { ResetPassword } from './components/ResetPassword';
 import { Cart } from './components/Cart';
 import { Shop } from './components/Shop';
-
-// import App from './App';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +20,6 @@ root.render(
       <Route exact path='/register'element={<Register/>}/> 
       <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 
       <Route exact path='/ResetPassword'element={<ResetPassword/>}/> 
-      <Route exact path='/'element={<Cart/>}/>
       <Route exact path='/Cart'element={<Cart/>}/> 
       <Route exact path='/Shop'element={<Shop/>}/> 
     </Routes>
