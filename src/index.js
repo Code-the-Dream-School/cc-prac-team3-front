@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import {Login} from './components/Login'
 import { Register } from './components/Register';
 import { ForgotPassword } from './components/ForgotPassword';
+import { ResetPassword } from './components/ResetPassword';
+import { Cart } from './components/Cart';
+import { Shop } from './components/Shop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +19,9 @@ root.render(
       <Route exact path='/Login'element={<Login/>}/> 
       <Route exact path='/register'element={<Register/>}/> 
       <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 
+      <Route exact path='/ResetPassword'element={<ResetPassword/>}/> 
+      <Route exact path='/Cart'element={<Cart/>}/> 
+      <Route exact path='/Shop'element={<Shop/>}/> 
     </Routes>
     </BrowserRouter>
 );

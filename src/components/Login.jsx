@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// comentario temporal
+
 
 export const Login = () => {
     const [email,setEmail]=useState("");
@@ -11,24 +11,22 @@ export const Login = () => {
       };
 return (
     <div className="start-container">
-        <h1 style={{color:"#860f4c",textAlign:"center"}}> My Account</h1>
+        <h1 style={{color:"#850b70",textAlign:"center"}}> My account</h1>
    <form onSubmit={handleSubmit}>
     <div>
-  {/* <b><label style={{color:"fuchsia" , textAlign:"center"}} form="Email">Email</label></b> */}
-   <p> <input className="create-styles" value={email} onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter your Email" id="Email" name="Email" /></p>
+   <p> <input className="create-styles" value={email} onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter your email" id="Email" name="Email" /></p>
     </div>
-    {/* <b><label style={{color:"fuchsia",textAlign:"center"}}form="Password">Password</label></b> */}
-   <div> <input className="create-styles" value={pass} onChange={(e)=>setPass(e.target.value)}type="Password" placeholder="*******************" id="Password" name="Password"/></div>
+   <div> <input className="create-styles" value={pass} onChange={(e)=>setPass(e.target.value)}type="Password" placeholder="Password" id="Password" name="Password"/></div>
    
    <p><button className="direction-to-the-other-page">Log in</button></p> 
    </form>
 
   <a className="create-new-account" href="/Register">New customer? Create you account.</a>
-  <a className="create-new-account" href="/ForgotPassword">Lost Password? Recover password.</a>
+  <a className="create-new-account" href="/ForgotPassword">Forgot Password? Recover password.</a>
    </div>
 )
 }
-// onClick={()=> props.onFormSwitch ('Register')}
+
 
 
 
