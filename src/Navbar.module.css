@@ -16,10 +16,13 @@ body {
 }
 
 nav {
-  height: 60px;
+  height: 80px;
+  width: 100%;
+  z-index: 1;
   background-color: #f7f1eb;
   display: flex;
-  position: relative;
+  position: fixed;
+  top: 0px;
 }
 
 .menu {
@@ -115,6 +118,10 @@ ul {
   .elementsMobile ul li {
     margin-right: unset;
     margin-top: 22px;
+  }
+
+  .elementsMobile ul li:hover {
+    background-color: #fcfcfc;
   }
 
   a {
