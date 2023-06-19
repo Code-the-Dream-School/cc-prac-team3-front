@@ -7,8 +7,8 @@
 }
 
 .create-new-account {
-  background: #eb0d78;
-  background: linear-gradient(90deg, #860f4c, #eb0b7f);
+  background: #18011f;
+  background: linear-gradient(90deg, #9966a8, #850b70);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -25,12 +25,14 @@
   top: 15%;
   text-align: center;
   opacity: 0.4;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .direction-to-the-other-page {
   appearance: none;
   border-radius: 5px;
-  background-color: #e07a8c;
+  background-color: #748d89;
   font-weight: bolder;
   width: 140px;
   height: 40px;
@@ -38,26 +40,101 @@
   top: 15%;
   left: 20%;
   padding: 15px;
-  text-align: center;
   font-size: medium;
-  color: white;
-  text-align: center;
+  color: #f7f1eb;
   font-size: var(--base-text-font-size);
 }
-
-.direction-to-new-account {
+.direction-to-the-other-page-2 {
   appearance: none;
   border-radius: 5px;
-  background-color: #e07a8c;
+  background-color: #748d89;
   font-weight: bolder;
   width: 140px;
   height: 40px;
   position: relative;
   top: 15%;
-  left: 4px;
+  left: -0%;
   padding: 15px;
   text-align: center;
-  width: auto;
   font-size: medium;
-  color: white;
+  color: #f7f1eb;
+  text-align: center;
+  font-size: var(--base-text-font-size);
+}
+
+.direction-to-new-account {
+  border-radius: 5px;
+  background-color: #748d89;
+  font-weight: bolder;
+  min-width: 2px;
+  height: 2px;
+  position: relative;
+  left: -60px;
+  padding: 10px;
+  font-size: smaller;
+  color: #f7f1eb;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.direction-to-new-account-next {
+  border-radius: 5px;
+  background-color: #748d89;
+  font-weight: bolder;
+  min-width: 2px;
+  height: 2px;
+  position: relative;
+  right: -60px;
+  padding: 10px;
+  font-size: smaller;
+  color: #f7f1eb;
+  justify-content: center;
+  flex-direction: column;
+}
+.direction-to-new-account-back {
+  border-radius: 5px;
+  background-color: #748d89;
+  font-weight: bolder;
+  min-width: 2px;
+  height: 2px;
+  position: relative;
+  left: -50px;
+  padding: 10px;
+  font-size: smaller;
+  color: #f7f1eb;
+  justify-content: center;
+  flex-direction: column;
+}
+.direction-to-new-account-submit {
+  border-radius: 5px;
+  background-color: #748d89;
+  font-weight: bolder;
+  min-width: 2px;
+  height: 2px;
+  position: relative;
+  right: -50px;
+  padding: 10px;
+  font-size: smaller;
+  color: #f7f1eb;
+  justify-content: center;
+  flex-direction: column;
+}
+.cart {
+  width: 100%;
+  height: 80px;
+  background-color: #748d89;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.links {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+.links a {
+  text-decoration: #18011f;
+  color: aliceblue;
+  margin-left: 20px;
+  font-size: 25px;
 }

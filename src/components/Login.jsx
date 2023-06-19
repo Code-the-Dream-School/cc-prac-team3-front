@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
-// comentario temporal
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -13,10 +12,9 @@ export const Login = () => {
   return (
     <div className="start-container">
       <Navbar />
-      <h1 style={{ color: "#860f4c", textAlign: "center" }}> My Account</h1>
+      <h1 style={{ color: "#850b70", textAlign: "center" }}> My account</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          {/* <b><label style={{color:"fuchsia" , textAlign:"center"}} form="Email">Email</label></b> */}
           <p>
             {" "}
             <input
@@ -24,13 +22,12 @@ export const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="Email"
-              placeholder="Enter your Email"
+              placeholder="Enter your email"
               id="Email"
               name="Email"
             />
           </p>
         </div>
-        {/* <b><label style={{color:"fuchsia",textAlign:"center"}}form="Password">Password</label></b> */}
         <div>
           {" "}
           <input
@@ -38,7 +35,7 @@ export const Login = () => {
             value={pass}
             onChange={(e) => setPass(e.target.value)}
             type="Password"
-            placeholder="*******************"
+            placeholder="Password"
             id="Password"
             name="Password"
           />
@@ -53,9 +50,8 @@ export const Login = () => {
         New customer? Create you account.
       </a>
       <a className="create-new-account" href="/ForgotPassword">
-        Lost Password? Recover password.
+        Forgot Password? Recover password.
       </a>
     </div>
   );
 };
-// onClick={()=> props.onFormSwitch ('Register')}
