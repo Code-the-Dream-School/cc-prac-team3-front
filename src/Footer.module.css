@@ -1,0 +1,66 @@
+#footer {
+  background-color: #53565a;
+  padding: 80px 40px;
+  font-family: "Lora";
+  color: #f7f1eb;
+}
+
+#appName {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 40px;
+  margin: 0px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+  padding-left: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.columnHeader {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+#email {
+  text-decoration: none;
+  color: #f7f1eb;
+  word-wrap: break-word;
+}
+
+#attribute {
+  margin-left: 20px;
+}
+#attributeLink {
+  margin-left: 0px;
+  text-decoration: none;
+  color: #f7f1eb;
+}
+
+#copyright {
+  text-align: left;
+  font-size: 1rem;
+  color: #860f4c;
+  margin-left: 20px;
+}
+
+@media (max-width: 425px) {
+  #footer {
+    padding: 80px 20px;
+  }
+}
