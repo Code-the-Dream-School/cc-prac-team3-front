@@ -8,7 +8,6 @@ export const ResetPassword = () => {
     const [password,setPass1]=useState("");
     const [confirmPass,setConfirmPass]=useState("");
 
-
     function handleClickReset(){
         navigate("/Login")
     }
@@ -24,7 +23,6 @@ return (
    <form onSubmit={handleSubmit}>
    <div><input className="create-styles" value={password} onChange={(e)=>setPass1(e.target.value)}type="password" placeholder="New password" id="password" name="password"/></div> 
    <div><p><input className="create-styles" value={confirmPass} onChange={(e)=>setConfirmPass(e.target.value)}type="password" placeholder=" Confirmed password" id="confirmPass" name="confirmPass"/></p></div> 
-
    </form>   
    <p><button className="direction-to-the-other-page-2"onClick={handleClickReset}>Reset password</button></p>
    </div>
