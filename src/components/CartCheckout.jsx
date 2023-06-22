@@ -12,7 +12,7 @@ import {useNavigate} from "react-router-dom"
     console.log(setItems)
 
     function handleClickAdd(){
-      navigate('/ShippingInfo')
+      navigate('/OrderSuccess')
     }
 
     function handleRemove(itemToRemove){

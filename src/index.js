@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from 'react-dom/client';
 // import App from './App';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
@@ -11,9 +11,10 @@ import { Cart } from './components/Cart';
 import { Shop } from './components/Shop';
 import { CartCheckout } from "./components/CartCheckout";
 import { ShippingInfo } from "./components/ShippingInfo";
+import useLocalStorage from "./util/useLocalStorage";
 
 const App=()=>{
-  const [items, setItems] = useState([])
+  const [items, setItems] = useLocalStorage('cartItems',[])
   return(
     <BrowserRouter>
     <Routes>
@@ -24,7 +25,7 @@ const App=()=>{
       <Route exact path='/Cart'element={<Cart items={items} setItems={setItems}/>}/> 
       <Route exact path='/Shop'element={<Shop/>}/> 
       <Route exact path='/CartCheckout'element={<CartCheckout items={items} setItems={setItems}/>}/> 
-      <Route exact path='/ShippingInfo'element={<ShippingInfo  items={items} setItems={setItems}/>}/> 
+      <Route exact path='/OrderSuccess'element={<ShippingInfo  items={items} setItems={setItems}/>}/> 
    
     </Routes>
     </BrowserRouter>
