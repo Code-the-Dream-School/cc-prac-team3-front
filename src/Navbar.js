@@ -34,13 +34,13 @@ function Navbar() {
                 <NavLink to="/shop">Shop</NavLink>
               </li>
               <li>
-                <NavLink to="/account">Account</NavLink>
+                <NavLink to="/register">Account</NavLink>
               </li>
               <li>
                 <NavLink to="/contact">Contact</NavLink>
               </li>
               <li>
-                <NavLink to="/login">Login</NavLink>
+                <NavLink to="/login">Log in</NavLink>
               </li>
               <li>
                 <NavLink to="/about">About</NavLink>
