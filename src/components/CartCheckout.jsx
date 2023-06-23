@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css"
 import { CheckoutProducts } from "./CheckoutProducts";
 import {useNavigate} from "react-router-dom"
+import Navbar from "../Navbar";
 
   export const CartCheckout= (props) => {
 
@@ -25,7 +26,10 @@ for (let y=0; y<items.length;y++){
 }
 
 return (
+  <>
+   <Navbar/>
   <div className="cartCheckout">
+   
     <div className="cartCheckout-products">
     {items.map((item) => <CheckoutProducts onRemove={handleRemove} imagen={item.imagen} title={item.title} value={item.value} key={item.title} quantity={item.quantity} />)}
     </div>
@@ -35,7 +39,7 @@ return (
     <div><p><button disabled={items.length===0} onClick={handleClickAdd} className="product-car-2">Checkout</button></p></div>
     </div>
   </div>
-
+  </>
 )
 }
 

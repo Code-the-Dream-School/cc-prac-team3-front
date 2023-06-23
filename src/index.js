@@ -12,12 +12,14 @@ import { Shop } from './components/Shop';
 import { CartCheckout } from "./components/CartCheckout";
 import { ShippingInfo } from "./components/ShippingInfo";
 import useLocalStorage from "./util/useLocalStorage";
+import Homepage from "./Homepage";
 
 const App=()=>{
   const [items, setItems] = useLocalStorage('cartItems',[])
   return(
     <BrowserRouter>
     <Routes>
+    <Route exact path='/' element={<Homepage/>}/>
       <Route exact path='/Login'element={<Login/>}/> 
       <Route exact path='/register'element={<Register/>}/> 
       <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 

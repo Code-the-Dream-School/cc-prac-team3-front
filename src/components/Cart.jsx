@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./App.css"
 import{Products} from "./Products"
 import { ShoppingCartItem } from "./ShoppingCartItem";
+import Navbar from "../Navbar";
 
   export const Cart = (props) => {
  const {items,setItems}=props
@@ -31,6 +32,7 @@ setCount(nextCount)
 console.log(count,items)
 return (
 <div>
+  <Navbar/>
    <div className="cart">
        <div className="links">
       <Link to="/"> Shop </Link>

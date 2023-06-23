@@ -312,6 +312,7 @@ flex-wrap: wrap;
 
 .cartCheckout{
     display: flex;
+    margin-top: 100px;
 }
 
 .product-car-2{
@@ -361,4 +362,7 @@ flex-wrap: wrap;
    color:#0c0c0c;
    width: 220px;
  
+}
+.shippingInfo-form{
+    margin-top: 100px;
 }
