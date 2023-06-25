@@ -5,12 +5,18 @@ import { ImUser } from "react-icons/im";
 import { MdShoppingBasket } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
 import styles from "./Navbar.module.css";
+import SearchBar from "./SearchBar";
 
 function Navbar() {
   const [showNavbarMenu, setShowNavbarMenu] = useState(false);
+  const [showSearchBar, setShowSearchBar] = useState(false);
 
   const handleShowNavbarMenu = () => {
     setShowNavbarMenu((showNavbarMenu) => !showNavbarMenu);
+  };
+
+  const handleShowSearchBar = () => {
+    setShowSearchBar((showSearchBar) => !showSearchBar);
   };
 
   return (
@@ -48,7 +54,10 @@ function Navbar() {
             </ul>
           </div>
           <div className={styles.icons}>
-            <BsSearchHeart />
+            <div id="search">
+              {showSearchBar && <SearchBar />}
+              <BsSearchHeart onClick={handleShowSearchBar} />
+            </div>
             <ImUser />
             <MdShoppingBasket />
           </div>
