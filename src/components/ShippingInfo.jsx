@@ -7,7 +7,7 @@ import Navbar from "../Navbar";
 
   export const ShippingInfo= (props) => {
     const navigate =useNavigate();
-    useEffect(() => {props.setItems([])}, [])
+    useEffect(() => {props.setItems([])},)
 
     // const [email,setEmail]=useState("");
     // const [country,setCountry]=useState("");

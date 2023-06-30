@@ -166,6 +166,7 @@
     text-align: center;
     justify-content: center;
     margin: auto;
+    margin-bottom: 16px;
 }
 .Products-2{
     background: #18011f;
@@ -365,4 +366,28 @@ flex-wrap: wrap;
 }
 .shippingInfo-form{
     margin-top: 100px;
+}
+
+.shop-categories-title{
+    color: #850b70;
+    font-size: 20px;
+ 
+}
+.shop-categories{
+    width: calc(40% - 16px);
+    display: inline-block;
+    padding-left: 16px;
+}
+
+.shop-categories-categories{
+font-size: 18px;
+font-weight: 700;
+}
+.shop-categories-subcategories{
+font-size: 16px;
+cursor: pointer;
+}
+.shop-products{
+    width: 60%;
+    display: inline-block;  
 }

@@ -32,7 +32,7 @@ function Navbar() {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/shop">Shop</NavLink>
+                <NavLink to="/Shop">Shop</NavLink>
               </li>
               <li>
                 <NavLink to="/register">Account</NavLink>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { getAllData } from "./util/index";
 import Navbar from "./Navbar";
 import Home from "./Home";
@@ -13,9 +13,9 @@ function App() {
   useEffect(() => {
     (async () => {
       const myData = await getAllData(URL);
-      //setMessage(myData.data);
+      // setMessage(myData.data);
     })();
-
+  
     return () => {
       console.log("unmounting");
     };
