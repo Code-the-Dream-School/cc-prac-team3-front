@@ -14,7 +14,7 @@ export const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
-    axios.post("http://localhost:8000/api/v1/auth/login",{email,password}) 
+    axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/auth/login` ,{email,password}) 
     .then(r => {
       if(r?.data?.token) {
         setUserToken(r.data.token)

@@ -11,7 +11,7 @@ import axios from "axios";
  const [shopItems, setShopItems] = useState([])
 
  useEffect(() => {
-axios.get("http://localhost:8000/api/v1/products") 
+axios.get(` ${process.env.REACT_APP_SERVICE_ENDPOINT}/products` ) 
     .then(r => r.json())
     .then(r => setShopItems(r?.data))
     .catch(err => console.log(err))
