@@ -16,7 +16,7 @@ import Homepage from "./Homepage";
 const App=()=>{
   const [items, setItems] = useLocalStorage('cartItems',[])
   const [userToken,setUserToken]=useLocalStorage('userToken',null)
-  let count=(0)
+  let count=(null)
   for (let y=0; y<items.length;y++){
     count=items[y].quantity+count
   }

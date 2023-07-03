@@ -53,7 +53,7 @@ function Navbar(props) {
             <ImUser />
             <Link to="/CartCheckout"> 
             <span className="navbar-cart">
-              <span className="navbar-cart-count"> {props.count && props.count} </span>
+             <strong> <span className="navbar-cart-count"> {props.count && props.count} </span></strong>
              <MdShoppingBasket />
              </span>
             </Link>
