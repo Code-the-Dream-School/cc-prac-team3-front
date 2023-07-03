@@ -9,7 +9,7 @@ import axios from "axios";
   export const Shop = (props) => {
  const {items,setItems}=props
  const [shopItems, setShopItems] = useState([])
- const [count, setCount] = useState(0)
+
  useEffect(() => {
 axios.get("http://localhost:8000/api/v1/products") 
     .then(r => r.json())
@@ -17,13 +17,7 @@ axios.get("http://localhost:8000/api/v1/products")
     .catch(err => console.log(err))
  }, [])
  console.log(shopItems)
- useEffect(() => {
-  let nextCount=(0)
-  for (let y=0; y<items.length;y++){
-    nextCount=items[y].quantity+nextCount
-  }
-setCount(nextCount)
- }, [items])
+
 
     function addTocart(cartItem){
       const newItems = items.map(it => ({...it}))
@@ -163,14 +157,17 @@ const products=[
 ]
 return (
 <div>
-  <Navbar/>
+  <Navbar count={props.count}/>
    <div className="cart">
        <div className="links">
       <Link to="/"> Shop </Link>
-     <Link to="/CartCheckout"> <ShoppingCartItem count={count}/>
+     <Link to="/CartCheckout"> <ShoppingCartItem count={props.count}/>
      </Link>
    </div>
    </div>
+   <div className="shop-wrapper">
+
+  
    <div className="shop-categories">
     <h4 className="shop-categories-title">Categories</h4>
       {products.map((p,i) => <div key={i}>
@@ -180,7 +177,7 @@ return (
    </div>
    <div className="shop-products">
    { showItems&&products[selectiedCategory].subCategories[selectiedSubCategory].items}
-   
+   </div>
    </div>
    </div>
 

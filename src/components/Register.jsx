@@ -44,7 +44,7 @@ console.log(userToken)
 
   return (
     <div className="start-container" style={{ textAlign: "center" }}>
-      <Navbar />
+      <Navbar count={props.count} />
       <h1 style={{ color: "#850b70", textAlign: "center" }}>
         {" "}
         Create my account

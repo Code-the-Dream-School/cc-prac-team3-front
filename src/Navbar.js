@@ -7,7 +7,7 @@ import { BsSearchHeart } from "react-icons/bs";
 import styles from "./Navbar.module.css";
 
 
-function Navbar() {
+function Navbar(props) {
   const [showNavbarMenu, setShowNavbarMenu] = useState(false);
 
   const handleShowNavbarMenu = () => {
@@ -51,7 +51,11 @@ function Navbar() {
           <div className={styles.icons}>
             <BsSearchHeart />
             <ImUser />
-            <Link to="/CartCheckout"> <MdShoppingBasket/>
+            <Link to="/CartCheckout"> 
+            <span className="navbar-cart">
+              <span className="navbar-cart-count"> {props.count && props.count} </span>
+             <MdShoppingBasket />
+             </span>
             </Link>
           </div>
         </div>

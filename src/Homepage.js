@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const URL = "http://localhost:8000/api/v1/";
 
-function App() {
+function App(props) {
   //const [message, setMessage] = useState("");
   
 
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar count={props.count} />
       {/*<h1>{message}</h1>*/}
       <Home />
       <Footer />

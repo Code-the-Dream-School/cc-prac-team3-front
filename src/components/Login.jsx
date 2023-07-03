@@ -27,7 +27,7 @@ export const Login = (props) => {
   };
   return (
     <div className="start-container">
-      <Navbar />
+      <Navbar count={props.count} />
       <h1 style={{ color: "#850b70", textAlign: "center" }}> My account</h1>
       <form onSubmit={handleSubmit}>
         <div>
