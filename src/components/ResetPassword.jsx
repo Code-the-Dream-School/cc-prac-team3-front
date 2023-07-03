@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./App.css"
 
-export const ResetPassword = () => {
+export const ResetPassword = (props) => {
     const navigate = useNavigate();
 
     const [password,setPass1]=useState("");

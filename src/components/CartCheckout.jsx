@@ -27,7 +27,7 @@ for (let y=0; y<items.length;y++){
 
 return (
   <>
-   <Navbar/>
+   <Navbar count={props.count}/>
   <div className="cartCheckout">
    
     <div className="cartCheckout-products">

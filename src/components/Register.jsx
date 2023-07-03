@@ -2,36 +2,49 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 import Navbar from "../Navbar";
+import axios from "axios";
 
-export const Register = () => {
+export const Register = (props) => {
   const navigate = useNavigate();
-
+  const {userToken, setUserToken} = props
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [password, setPass] = useState("");
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  const [phoneNumber, setPhone] = useState("");
+  const [streetAddress, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [code, setCode] = useState("");
+  const userType = 'buyer'
   const [confirmPass, setConfirmPass] = useState("");
 
   function handleClickBack() {
     navigate("/Login");
   }
 
-  function handleClickSubmit() {
-    navigate("/Login");
-  }
-
+  // function handleClickSubmit() {
+  //   navigate("/Login");
+  // }
+console.log(userToken)
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
     console.log(setEmail);
+    axios.post(` ${process.env.REACT_APP_SERVICE_ENDPOINT}/auth/register` ,{email,password,name,phoneNumber,streetAddress,city,state,code,userType}) 
+    // .then(r => r.json())
+    .then(r => {
+      if(r?.data?.token) {
+        setUserToken(r.data.token)
+        navigate('/')
+      }
+      
+      })
+    .catch(err => console.log(err))
   };
+
   return (
     <div className="start-container" style={{ textAlign: "center" }}>
-      <Navbar />
+      <Navbar count={props.count} />
       <h1 style={{ color: "#850b70", textAlign: "center" }}>
         {" "}
         Create my account
@@ -69,7 +82,7 @@ export const Register = () => {
           <p>
             <input
               className="create-styles"
-              value={pass}
+              value={password}
               onChange={(e) => setPass(e.target.value)}
               type="Password"
               placeholder="Password"
@@ -96,7 +109,7 @@ export const Register = () => {
           <p>
             <input
               className="create-styles"
-              value={phone}
+              value={phoneNumber}
               onChange={(e) => setPhone(e.target.value)}
               type="PhoneNumber"
               placeholder="Enter your phone number"
@@ -109,7 +122,7 @@ export const Register = () => {
           <p>
             <input
               className="create-styles"
-              value={address}
+              value={streetAddress}
               onChange={(e) => setAddress(e.target.value)}
               type="Address"
               placeholder="Enter your street address"
@@ -165,7 +178,7 @@ export const Register = () => {
         </button>
         <button
           className="direction-to-new-account-submit"
-          onClick={handleClickSubmit}
+          type="submit"
         >
           Submit
         </button>

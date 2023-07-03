@@ -1,17 +1,33 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-export const Login = () => {
+export const Login = (props) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [password, setPass] = useState("");
+
+  const {userToken, setUserToken} = props
+  console.log(userToken)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
+    axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/auth/login` ,{email,password}) 
+    .then(r => {
+      if(r?.data?.token) {
+        setUserToken(r.data.token)
+        navigate('/')
+      }
+      
+      })
+  
+    .catch(err => console.log(err))
   };
   return (
     <div className="start-container">
-      <Navbar />
+      <Navbar count={props.count} />
       <h1 style={{ color: "#850b70", textAlign: "center" }}> My account</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -32,7 +48,7 @@ export const Login = () => {
           {" "}
           <input
             className="create-styles"
-            value={pass}
+            value={password}
             onChange={(e) => setPass(e.target.value)}
             type="Password"
             placeholder="Password"
@@ -42,7 +58,7 @@ export const Login = () => {
         </div>
 
         <p>
-          <button className="direction-to-the-other-page">Log in</button>
+          <button type="submit" className="direction-to-the-other-page">Log in</button>
         </p>
       </form>
 

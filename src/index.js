@@ -7,7 +7,6 @@ import {Login} from './components/Login'
 import { Register } from './components/Register';
 import { ForgotPassword } from './components/ForgotPassword';
 import { ResetPassword } from './components/ResetPassword';
-import { Cart } from './components/Cart';
 import { Shop } from './components/Shop';
 import { CartCheckout } from "./components/CartCheckout";
 import { ShippingInfo } from "./components/ShippingInfo";
@@ -16,18 +15,23 @@ import Homepage from "./Homepage";
 
 const App=()=>{
   const [items, setItems] = useLocalStorage('cartItems',[])
+  const [userToken,setUserToken]=useLocalStorage('userToken',null)
+  let count=(null)
+  for (let y=0; y<items.length;y++){
+    count=items[y].quantity+count
+  }
+
   return(
     <BrowserRouter>
     <Routes>
-    <Route exact path='/' element={<Homepage/>}/>
-      <Route exact path='/Login'element={<Login/>}/> 
-      <Route exact path='/register'element={<Register/>}/> 
-      <Route exact path='/ForgotPassword'element={<ForgotPassword/>}/> 
-      <Route exact path='/ResetPassword'element={<ResetPassword/>}/> 
-      <Route exact path='/Cart'element={<Cart items={items} setItems={setItems}/>}/> 
-      <Route exact path='/Shop'element={<Shop/>}/> 
-      <Route exact path='/CartCheckout'element={<CartCheckout items={items} setItems={setItems}/>}/> 
-      <Route exact path='/OrderSuccess'element={<ShippingInfo  items={items} setItems={setItems}/>}/> 
+    <Route exact path='/' element={<Homepage count={count}/>}/>
+      <Route exact path='/Login'element={<Login userToken={userToken} setUserToken={setUserToken} count={count}/>}/> 
+      <Route exact path='/register'element={<Register userToken={userToken} setUserToken={setUserToken} count={count}/>}/> 
+      <Route exact path='/ForgotPassword'element={<ForgotPassword count={count}/>}/> 
+      <Route exact path='/ResetPassword'element={<ResetPassword count={count}/>}/> 
+      <Route exact path='/Shop'element={<Shop items={items} setItems={setItems} count={count}/>}/> 
+      <Route exact path='/CartCheckout'element={<CartCheckout items={items} setItems={setItems} count={count}/>}/> 
+      <Route exact path='/OrderSuccess'element={<ShippingInfo  items={items} setItems={setItems} count={count}/>}/> 
    
     </Routes>
     </BrowserRouter>

@@ -7,7 +7,7 @@ import Navbar from "../Navbar";
 
   export const ShippingInfo= (props) => {
     const navigate =useNavigate();
-    useEffect(() => {props.setItems([])}, [])
+    useEffect(() => {props.setItems([])},)
 
     // const [email,setEmail]=useState("");
     // const [country,setCountry]=useState("");
@@ -25,14 +25,14 @@ import Navbar from "../Navbar";
         // console.log(setEmail);
     }
     function handleClickShop(){
-        navigate("/Cart")
+        navigate("/Shop")
     }
 
     return (
         <div style={{textAlign:"center"}}>
         {/* <h1 style={{color:"#850b70",textAlign:"center"}}> Contact</h1> */}
         
-            <Navbar/>
+            <Navbar count={props.count}/>
             <form className="shippingInfo-form"   onSubmit={handleSubmit}>
             {/* <h3>Already have an account? Login here..</h3>
             <div><p><input className="create-styles" value={email} onChange={(e)=>setEmail(e.target.value)}type="Email" placeholder="Enter your email" id="Email" name="Email"/></p></div> */}
