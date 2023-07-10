@@ -5,14 +5,13 @@
     import { ShoppingCartItem } from "./ShoppingCartItem";
     import Navbar from "../Navbar";
     import axios from "axios";
-    // import { MdToken } from "react-icons/md";
 
       export const Shop = (props) => {
     const {items,setItems}=props
     const [shopItems, setShopItems] = useState([])
     const {userToken} = props
 
-
+    console.log(shopItems)
     /**
       * useEffect, se ejecuta despues de que el componente se ha montado.
       * Sin dependencies []: se ejecutara una sola vez

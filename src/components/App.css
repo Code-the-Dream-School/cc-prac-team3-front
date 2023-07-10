@@ -514,30 +514,15 @@ font-weight: bold;
   border-color: gray;
   }
 
-  /* .file-select{
-    position: relative;
-    display: inline-block;
-  }
-  .file-select::before {
-    background: #f1edefec;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+ .file-select-2{
     border-radius: 5px;
-    content: 'File Image';
-    position: absolute;
-    width: 220px;
-    height: 90px;
-    top: 0;
-    opacity: 0.4;
-    appearance: none;
-
-  }
-  .file-select input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-  }
-   */
+    background-color: #c94687;
+    font-weight: bolder;
+    width: 140px;
+    height: 40px;
+    position: relative;
+  
+    padding: 15px;
+    color: #f7f1eb;
+ }
+   

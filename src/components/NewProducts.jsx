@@ -1,15 +1,16 @@
-  import React , {useState}from "react";
+  import React , {useState, useRef}from "react";
   import Navbar from "../Navbar";
   import axios from "axios";
-
   export const NewProducts = (props) => {
+
   const [productName, setProductName] = useState('')
-  const [productImage, setProductImage] = useState('')
+  const [productImage, setProductImage] = useState()
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState('')
   const [category, setCategory] = useState('Furniture')
   const [condition, setCondition] = useState('New')
   const {userToken} = props
+  const inputRef = useRef()
 
   const onCategoryChange = (e) => {
       setCategory(e.target.value)
@@ -21,22 +22,30 @@
   console.log(userToken)
 
   const handleClick = (e) => {
-      // axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products` ,{productName,productImage,description,price,category,condition}) 
-      // axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products`,{ headers:{Authorization:`Bearer ${userToken}`}})
-      axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products`, {
-        productName: productName,
-        description: description,
-        price:price,
-        category:category,
-        condition:condition,
-        productImage:productImage,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    console.log('prueba')
+    const formData = new FormData();
+    formData.append("productName", productName);
+    formData.append("productImage",productImage);
+    formData.append("description", description);
+    formData.append("price", price);
+    formData.append("category", category);
+    formData.append("condition", condition);
+
+    axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products`,formData,{ headers: {Authorization:`Bearer ${userToken}`, 'Content-Type': 'multipart/form-data' } })
+      // axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products`, {
+      //   productName: productName,
+      //   description: description,
+      //   price:price,
+      //   category:category,
+      //   condition:condition,
+      //   productImage:productImage,
+      // })
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
     
     //   .then(r => {
     //     })
@@ -114,10 +123,12 @@
   <label className="new-products-label">
   <span>Product Image</span>
   <label className="file-select">
+  <button className="file-select-2" onClick={()=>inputRef.current.click()} type="button"> Add Photos</button>
   <input 
                 type="file" 
-                value={productImage}
-                onChange={(e) => setProductImage(e.target.value)}
+                ref={inputRef}
+                style={{display:"none"}}
+                onChange={e => setProductImage(e.target.files[0])}
                 placeholder="Add photos"    
           />
   </label>

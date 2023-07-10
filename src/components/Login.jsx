@@ -2,6 +2,7 @@
   import Navbar from "../Navbar";
   import axios from "axios";
   import { useNavigate } from "react-router-dom";
+  import { Link } from "react-router-dom";
 
   export const Login = (props) => {
   const navigate = useNavigate();
@@ -63,12 +64,12 @@
   </p>
   </form>
 
-  <a className="create-new-account" href="/register">
+  < Link to="/register" className="create-new-account">
   New customer? Create you account.
-  </a>
-  <a className="create-new-account" href="/ForgotPassword">
+  </Link>
+  <Link to="/ForgotPassword" className="create-new-account" >
   Forgot Password? Recover password.
-  </a>
+  </Link>
   </div>
-  );
+  )
   };

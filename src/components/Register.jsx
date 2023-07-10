@@ -3,6 +3,7 @@
   import "./App.css";
   import Navbar from "../Navbar";
   import axios from "axios";
+  import { Link } from "react-router-dom";
 
   export const Register = (props) => {
     const navigate = useNavigate();
@@ -183,9 +184,9 @@
             Submit
           </button>
           <p>
-            <a className="create-new-account" href="/login">
+            < Link to="/register" className="create-new-account" >
               Already have an account? Login here.
-            </a>
+             </Link>
           </p>
         </form>
       </div>
