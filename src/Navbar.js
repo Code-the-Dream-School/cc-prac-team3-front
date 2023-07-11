@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { NavLink,Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { CgMenu } from "react-icons/cg";
 import { ImUser } from "react-icons/im";
 import { MdShoppingBasket } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
 import styles from "./Navbar.module.css";
 import SearchBar from "./SearchBar";
-
 
 function Navbar() {
   const [showNavbarMenu, setShowNavbarMenu] = useState(false);
@@ -60,7 +59,9 @@ function Navbar() {
               <BsSearchHeart onClick={handleShowSearchBar} />
             </div>
             <ImUser />
-            <Link to="/CartCheckout"> <MdShoppingBasket/>
+            <Link to="/CartCheckout">
+              {" "}
+              <MdShoppingBasket />
             </Link>
           </div>
         </div>

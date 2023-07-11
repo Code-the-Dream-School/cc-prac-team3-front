@@ -1,6 +1,9 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
-function SearchBar({ keyword, onChange }) {
+function SearchBar({ query, onChange }) {
+  const [text, setText] = useState("");
+
   const BarStyle = {
     width: "20rem",
     background: "#F0F0F0",
@@ -8,14 +11,25 @@ function SearchBar({ keyword, onChange }) {
     borderRadius: "20px",
     padding: "0.5rem",
   };
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_SERVICE_ENDPOINT}/?query=${text}`)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }, [text]);
+
   return (
-    <input
-      style={BarStyle}
-      key="search-bar"
-      value={keyword}
-      placeholder={"search by category"}
-      onChange={(e) => onChange(e.target.value)}
-    />
+    <>
+      <input
+        style={BarStyle}
+        key="search-bar"
+        value={text}
+        placeholder={"search for product"}
+        onChange={(event) => setText(event.target.value)}
+        //onChange={(e) => onChange(e.target.value)}
+      />
+    </>
   );
 }
 
