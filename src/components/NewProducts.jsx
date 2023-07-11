@@ -23,34 +23,49 @@
 
   const handleClick = (e) => {
     console.log('prueba')
-    const formData = new FormData();
-    formData.append("productName", productName);
-    formData.append("productImage",productImage);
-    formData.append("description", description);
-    formData.append("price", price);
-    formData.append("category", category);
-    formData.append("condition", condition);
 
-    axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products`,formData,{ headers: {Authorization:`Bearer ${userToken}`, 'Content-Type': 'multipart/form-data' } })
-      // axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products`, {
-      //   productName: productName,
-      //   description: description,
-      //   price:price,
-      //   category:category,
-      //   condition:condition,
-      //   productImage:productImage,
-      // })
-      // .then(function (response) {
-      //   console.log(response);
-      // })
-      // .catch(function (error) {
-      //   console.log(error);
-      // });
-    
-    //   .then(r => {
-    //     })
-    
-    //   .catch(err => console.log(err))
+    const formDataImage = new FormData();
+    formDataImage.append("upload_preset", "vkkuywfu"); // esto me lo exige cloudinary
+    formDataImage.append("file", productImage); // esto es la imagen que seleccione del computador
+
+    //Ya tengo el formData listo, ahora voy a enviarlo a cloudinary
+    axios.post(
+      "https://api.cloudinary.com/v1_1/nurseryfinds/image/upload",
+      formDataImage
+    ).then((response) => {
+
+      //Si la imagen sube bien, cloudinary me devuelve unos datos
+
+      //Aqui simplemente voy a imprimir la respuesta de una forma bonita. Para ello uso stringify, null, 2
+      //Ya luego vera el resultado
+      console.log("🍺", JSON.stringify(response.data, null, 2))
+
+
+  
+      //Aqui guardo la url de la imagen, que cloudinary me dio ✅
+      const url_image = response.data.secure_url;
+
+      const formData = {
+        productName,
+        description,
+        price,
+        file: { path: url_image},
+        category,
+        condition
+      }
+
+      return axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/products`,formData, {
+        headers: {Authorization:`Bearer ${userToken}`}
+      })
+    })
+    .then(() => {
+      console.log("✅", "Todo funciono muy bien")
+    })
+  
+    .catch((error) => {
+      console.log("❌", "Also salio muy mal: " + error);
+    })
+
     };
 
   return (
@@ -63,7 +78,7 @@
         <input
                 className="new-products-input"
                 value={productName}
-                onChange={(e) => setProductName(e.target.value)}
+                onChange={(e) => setProductName(e.target.value)} 
                 placeholder="Product Name"
               
           />
@@ -128,7 +143,7 @@
                 type="file" 
                 ref={inputRef}
                 style={{display:"none"}}
-                onChange={e => setProductImage(e.target.files[0])}
+                onChange={e => setProductImage(e.target.files[0])} // Aqui definiste la imagen en el state productImage
                 placeholder="Add photos"    
           />
   </label>

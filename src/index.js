@@ -34,7 +34,7 @@
         <Route exact path='/Shop'element={<Shop items={items} setItems={setItems} count={count} userToken={userToken}/> }/> 
         <Route exact path='/CartCheckout'element={<CartCheckout items={items} setItems={setItems} count={count}/>}/> 
         <Route exact path='/OrderSuccess'element={<ShippingInfo  items={items} setItems={setItems} count={count}/>}/> 
-        <Route exact path='/NewProducts'element={<NewProducts  items={items} setItems={setItems} count={count}/>}/> 
+        <Route exact path='/NewProducts'element={<NewProducts  items={items} setItems={setItems} count={count} userToken={userToken} />}/> 
       </Routes>
       </BrowserRouter>
     )

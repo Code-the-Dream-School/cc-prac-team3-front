@@ -31,7 +31,7 @@
       e.preventDefault();
       console.log(email);
       console.log(setEmail);
-      axios.post(` ${process.env.REACT_APP_SERVICE_ENDPOINT}/auth/register` ,{email,password,name,phoneNumber,streetAddress,city,state,code,userType}) 
+      axios.post(`${process.env.REACT_APP_SERVICE_ENDPOINT}/auth/register` ,{email,password,name,phoneNumber,streetAddress,city,state,code,userType}) 
       // .then(r => r.json())
       .then(r => {
         if(r?.data?.token) {
