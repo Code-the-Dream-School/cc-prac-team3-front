@@ -410,3 +410,119 @@ cursor: pointer;
     color:#850b70
    
 }
+
+.new-products{
+    margin-top: 120px;
+    display:grid;
+    gap:16px;
+    max-width: 600px;
+    margin-left: 230px;
+    justify-content: center;
+
+}
+.direction-to-new-account-submit-2{
+    border-radius: 5px;
+    background-color: #748d89;
+    font-weight: bolder;
+    width: 140px;
+    height: 40px;
+    position: relative;
+    top: 5%;
+    left: 20%;
+    padding: 15px;
+    color: #f7f1eb;
+  
+}
+.new-products-input{
+    background: #f1edefec;
+    border-radius: 5px;
+    appearance: none;
+    font-weight: bold;
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    opacity: 0.4;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.new-products-label span{
+display:block;
+margin-bottom: 4px;
+color: #850b70;
+font-weight: bold;
+}
+
+.direction-to-new-account-back-3 {
+    border-radius: 5px;
+    background-color: #850b70;
+    font-weight: bolder;
+    min-width: 2px;
+    height: 2px;
+    position: relative;
+    left: -60px;
+    padding: 10px;
+    font-size: smaller;
+    color: #f7f1eb;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .direction-to-new-account-back-4 {
+    border-radius: 5px;
+    background-color: #850b70;
+    font-weight: bolder;
+    min-width: 2px;
+    height: 2px;
+    position: relative;
+    right: -60px;
+    padding: 10px;
+    font-size: smaller;
+    color: #f7f1eb;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .user-panel{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding: 14px;
+    background:#fcfcfc;
+    border: 1px solid #9966a8;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #850b70;
+    font-weight: bolder;
+    font-size: 16px;
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.4);
+  
+}
+  .panel-open{
+    position: relative;
+    cursor: pointer;
+    
+  }
+  .select-css{
+  background: #f1edefec;
+  padding: .8em 1.4em .3em .8em;
+  width: 231px;
+  opacity: 0.4;
+  border-radius: 5px;
+  text-align: center;
+  height: 40px;
+  font-weight:bold;
+  font-family: 'Arial', sans-serif;
+  border-color: gray;
+  }
+
+ .file-select-2{
+    border-radius: 5px;
+    background-color: #c94687;
+    font-weight: bolder;
+    width: 140px;
+    height: 40px;
+    position: relative;
+  
+    padding: 15px;
+    color: #f7f1eb;
+ }
+   
